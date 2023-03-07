@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-4"></div>
+        <div class="col-4">
+            {%if messages%}
+                {%for msg in messages%}
+                    {{msg}}
+                {%endfor%}
+            {%endif%}
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8"><form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button class="btn btn-info"  type="submit">Submit</button>
+        </form> </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+{%endblock%}

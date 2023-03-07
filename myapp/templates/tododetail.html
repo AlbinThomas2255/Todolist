@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-2"></div>
+        <div class="col-8 ">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>TASKNAME</th>
+                    <th>USER</th>
+                </tr>
+                <tr>
+                    <td>{{todo.id}}</td>
+                    <td>{{todo.task_name}}</td>
+                    <td>{{todo.user}}</td>                    
+                </tr>
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+{%endblock%}
